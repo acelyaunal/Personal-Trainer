@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Exercises</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/select_exercises.css') }}">
+</head>
+<body>
+    <div class="container">
+        <section id="select_exercises" class="exercises">
+            <h1 class="section-title">SELECT EXERCISES</h1>
+            <form method="POST" action="{{ url_for('select_exercises') }}">
+                <div class="exercises-content">
+                    <label class="exercises-link">
+                        <div class="exercises-image">
+                            <img src="{{ url_for('static', filename='images/squatexercise.png') }}" alt="Squat">
+                            <h4>SQUAT</h4>
+                            <div class="exercise-description">
+                                <p>Squat strengthens the legs, hips, and back muscles. Feet are shoulder-width apart, body leans back, and knees bend. It improves balance and supports calorie burning.</p>
+                                <input type="checkbox" name="exercise" value="squat" class="exercise-checkbox">
+                            </div>
+                        </div>
+                    </label>
+                    <label class="exercises-link">
+                        <div class="exercises-image">
+                            <img src="{{ url_for('static', filename='images/legraiseexercise.png') }}" alt="LegRaise">
+                            <h4>LEG RAISE</h4>
+                            <div class="exercise-description">
+                                <p>Leg Raise works the abdominal and hip muscles. Lying on the ground, lift your legs up straight while keeping your back on the floor. It strengthens core muscles and improves flexibility.</p>
+                                <input type="checkbox" name="exercise" value="legraise" class="exercise-checkbox">
+                            </div>
+                        </div>
+                    </label>
+                    <label class="exercises-link">
+                        <div class="exercises-image">
+                            <img src="{{ url_for('static', filename='images/birddogexercise.png') }}" alt="BirdDog">
+                            <h4>BIRDDOG</h4>
+                            <div class="exercise-description">
+                                <p>BirdDog works the back and abdominal muscles. Hands and knees are on the ground, one arm and the opposite leg are raised straight. It strengthens core muscles and balanced movements.</p>
+                                <input type="checkbox" name="exercise" value="birddog" class="exercise-checkbox">
+                            </div>
+                        </div>
+                    </label>
+                    <label class="exercises-link">
+                        <div class="exercises-image">
+                            <img src="{{ url_for('static', filename='images/dumbellcurlexercise.png') }}" alt="DumbbellCurl">
+                            <h4>DUMBBELL CURL</h4>
+                            <div class="exercise-description">
+                                <p>Dumbbell Curl strengthens arm muscles. Dumbbells are held with palms facing up while standing, and arms are bent. It works the biceps muscles.</p>
+                                <input type="checkbox" name="exercise" value="dumbbellcurl" class="exercise-checkbox">
+                            </div>
+                        </div>
+                    </label>
+                    <label class="exercises-link">
+                        <div class="exercises-image">
+                            <img src="{{ url_for('static', filename='images/kneetouchexercise.png') }}" alt="KneeTouch">
+                            <h4>KNEE TOUCH</h4>
+                            <div class="exercise-description">
+                                <p>Knee Touch works the abdominal and hip muscles. While lying on the ground, hands are raised towards the knees. It strengthens core muscles and improves flexibility.</p>
+                                <input type="checkbox" name="exercise" value="kneetouch" class="exercise-checkbox">
+                            </div>
+                        </div>
+                    </label>
+                    <label class="exercises-link unavailable">
+                        <div class="exercises-image">
+                            <img src="{{ url_for('static', filename='images/newexercise1.png') }}" alt="New Exercise 1">
+                            <h4>NEW EXERCISE 1</h4>
+                            <div class="exercise-description">
+                                <p>Coming soon</p>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="exercises-link unavailable">
+                        <div class="exercises-image">
+                            <img src="{{ url_for('static', filename='images/newexercise2.png') }}" alt="New Exercise 2">
+                            <h4>NEW EXERCISE 2</h4>
+                            <div class="exercise-description">
+                                <p>Coming soon</p>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="exercises-link unavailable">
+                        <div class="exercises-image">
+                            <img src="{{ url_for('static', filename='images/newexercise3.png') }}" alt="New Exercise 3">
+                            <h4>NEW EXERCISE 3</h4>
+                            <div class="exercise-description">
+                                <p>Coming soon</p>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="exercises-link unavailable">
+                        <div class="exercises-image">
+                            <img src="{{ url_for('static', filename='images/newexercise4.png') }}" alt="New Exercise 4">
+                            <h4>NEW EXERCISE 4</h4>
+                            <div class="exercise-description">
+                                <p>Coming soon</p>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="exercises-link unavailable">
+                        <div class="exercises-image">
+                            <img src="{{ url_for('static', filename='images/newexercise5.png') }}" alt="New Exercise 5">
+                            <h4>NEW EXERCISE 5</h4>
+                            <div class="exercise-description">
+                                <p>Coming soon</p>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+                <div class="button-container">
+                    <button type="submit" class="button" id="start-button" disabled>
+                        <span class="button-content">START EXERCISES</span>
+                    </button>
+                    <button type="button" class="button" onclick="window.location.href='{{ url_for('settings') }}'">
+                        <span class="button-content">Settings</span>
+                    </button>
+                    <button type="button" class="button" onclick="window.location.href='{{ url_for('history') }}'">
+                        <span class="button-content">Profile</span>
+                    </button>
+                    <button type="button" class="button" onclick="window.location.href='{{ url_for('index') }}'">
+                        <span class="button-content">Log Out</span>
+                    </button>
+                </div>
+            </form>
+        </section>
+    </div>
+    <script src="{{ url_for('static', filename='js/select_exercises.js') }}"></script>
+</body>
+</html>

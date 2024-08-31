@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/exercise.css') }}">
+</head>
+<body>
+    <section id="exercise_section" class="container">
+        <h1 class="section-title">EXERCISES</h1>
+        
+        <!-- General Exercise Warnings -->
+        <div class="exercise-warnings">
+            <h2 class="warnings-title">General Exercise Warnings:</h2>
+            <ul class="warnings-list">
+                <li>Whatever exercise you are going to do, just turn on its camera.</li>
+                <li>Maintain proper posture to avoid injuries.</li>
+                <li>Warm up before starting the exercises.</li>
+                <li>Ensure a clear and safe space around you.</li>
+                <li>Stop immediately if you feel any pain.</li>
+                <li>Avoid exercising in low-light conditions to ensure proper camera detection.</li>
+                <li>Ensure a plain background for better camera tracking.</li>
+            </ul>
+        </div>
+        
+        {% for exercise in exercise_titles %}
+            <div class="exercise-container">
+                <div id="{{ exercise.lower() }}-feed-container" class="camera-feed off" onclick="toggleCamera('{{ exercise.lower() }}')">
+                    <img id="{{ exercise.lower() }}-feed" src="" alt="Camera feed">
+                    <div class="overlay">Camera Off - Click to Turn On</div>
+                </div>
+                <div class="exercise-info">
+                    <img src="{{ url_for('static', filename=exercise_images[exercise.lower()]) }}" alt="{{ exercise }}" class="exercise-image">
+                    <div class="exercise-details">
+                        <h2 class="exercise-title">{{ exercise }}</h2>
+                        <ul class="warnings-list">
+                            {% if exercise.lower() == "squat" %}
+                                <li>Keep your feet shoulder-width apart.</li>
+                                <li>Push your hips back as you lower down.</li>
+                                <li>Keep your knees behind your toes.</li>
+                                <li>Keep your chest up and back straight.</li>
+                            {% elif exercise.lower() == "legraise" %}
+                                <li>Keep your legs straight while lifting them.</li>
+                                <li>Engage your core muscles throughout the movement.</li>
+                                <li>Avoid arching your back or lifting your hips off the ground.</li>
+                                <li>Lower your legs slowly to avoid injury.</li>
+                            {% elif exercise.lower() == "birddog" %}
+                                <li>Keep your back flat and core engaged.</li>
+                                <li>Extend opposite arm and leg straight out.</li>
+                                <li>Avoid arching your back or twisting your hips.</li>
+                                <li>Keep your head in line with your spine.</li>
+                            {% elif exercise.lower() == "dumbbellcurl" %}
+                                <li>Stand with feet hip-width apart.</li>
+                                <li>Keep your elbows close to your torso.</li>
+                                <li>Lift the weights with a controlled motion.</li>
+                                <li>Do not swing your arms or use momentum.</li>
+                            {% elif exercise.lower() == "kneetouch" %}
+                                <li>Stand with feet shoulder-width apart.</li>
+                                <li>Lift one knee and touch it with the opposite elbow.</li>
+                                <li>Keep your core engaged and back straight.</li>
+                                <li>Alternate sides with each repetition.</li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                    <div class="count-display" id="{{ exercise.lower() }}-count">Count: {{ exercise_counts[exercise.lower()] }}</div>
+                </div>
+            </div>
+        {% endfor %}
+        <div class="end-button" onclick="window.location.href='{{ url_for('end_exercise') }}'">End Exercise</div>
+    </section>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/exercise.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Now!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">
+</head>
+<body>
+    <div class="reveal">
+        <div class="container">
+            <div class="left-panel">
+                <div class="centered-content">
+                    <h2 class="centered-content-title">Log In Now</h2>
+                    <a href="{{ url_for('login') }}" class="login-button">LOGIN</a>
+                </div>
+            </div>
+            <div id="verticle"></div>
+            <div class="right-panel">
+                <div class="form-container">
+                    <h2>REGISTER NOW</h2>
+                    <form action="{{ url_for('register') }}" method="POST">
+                        <div class="input-row">
+                            <input type="text" id="firstname" name="firstname" placeholder="First Name" required>
+                            <input type="text" id="lastname" name="lastname" placeholder="Last Name" required>
+                        </div>
+                        <div class="input-row">
+                            <input type="email" id="email" name="email" placeholder="Email" required>
+                            <select id="gender" name="gender" required>
+                                <option value="">Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="input-row">
+                            <input type="number" id="height" name="height" placeholder="Height(cm)" required>
+                            <input type="number" id="weight" name="weight" placeholder="Weight(kg)" required>
+                            <input type="date" id="dob" name="dob" required>
+                        </div>
+                        <div class="input-row">
+                            <input type="password" id="password" name="password" placeholder="Password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{8,}" title="Password must contain at least one number, one uppercase letter, one lowercase letter, one special character, and at least 8 or more characters">
+                            <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required>
+                        </div>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="cbx" style="display: none">
+                            <label for="cbx" class="check">
+                                <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                    <path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>
+                                    <polyline points="1 9 7 14 15 4"></polyline>
+                                </svg>
+                            </label>
+                            <label for="cbx" class="read-text">I've read and agree with Terms of Service and our Privacy Policy</label>
+                        </div>
+                        <button type="submit" class="submit-btn"><span>REGISTER</span></button>
+                    </form>
+                    <div class="additional-options">
+                        <p class="login-link">Already have an account? <a href="{{ url_for('login') }}">Log In!</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/register.js') }}"></script>
+</body>
+</html>

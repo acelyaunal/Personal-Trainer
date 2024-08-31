@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/history.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome, {{ user.firstname }} {{ user.lastname }}</h1>
+        <div class="profile-info">
+            <table>
+                <tr>
+                    <td>Height:</td>
+                    <td>{{ user.height }} cm</td>
+                </tr>
+                <tr>
+                    <td>Weight:</td>
+                    <td>{{ user.weight }} kg</td>
+                </tr>
+                <tr>
+                    <td>BMI:</td>
+                    <td>{{ bmi }}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="date-picker">
+            <label for="date">Select a date:</label>
+            <input type="date" id="date" name="date" value="{{ date }}" onchange="window.location.href='{{ url_for('history', date='') }}' + this.value;">
+        </div>
+        {% if no_data_message %}
+            <p>{{ no_data_message }}</p>
+        {% else %}
+            {% for timestamp, exercises in grouped_exercises.items() %}
+                <h2 class="exercise-time">{{ timestamp }}</h2>
+                <table class="exercise-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Exercise Name</th>
+                            <th>Repetitions</th>
+                            <th>Time</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for exercise in exercises %}
+                            <tr>
+                                <td>{{ exercise.timestamp.astimezone(ISTANBUL_TZ).strftime('%d/%m/%Y %H:%M:%S') }}</td>
+                                <td>{{ exercise.exercise_type.name }}</td>
+                                <td>{{ exercise.repetitions }}</td>
+                                <td>{{ exercise.timestamp.astimezone(ISTANBUL_TZ).strftime('%H:%M:%S') }}</td>
+                                <td>
+                                    <form action="{{ url_for('delete_exercise', exercise_id=exercise.id) }}" method="post">
+                                        <button type="submit" class="delete-button">Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            {% endfor %}
+        {% endif %}
+        <div class="buttons">
+            <a href="{{ url_for('select_exercises') }}" class="button">New Exercise</a>
+            <a href="{{ url_for('settings') }}" class="button">Settings</a>
+            <a href="{{ url_for('logout') }}" class="button">Logout</a>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/history.js') }}"></script>
+</body>
+</html>

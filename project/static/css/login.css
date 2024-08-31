@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body,
+html {
+  height: 100%;
+  background: linear-gradient(to right, #ffffff, hsl(212, 52%, 55%));
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 2s ease;
+}
+
+.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.container {
+  display: flex;
+  height: 520px;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin: 40px;
+}
+
+#verticle {
+  border-left: 1px solid #b2b2b2;
+  height: 464px;
+  position: absolute;
+  margin-right: 110px;
+  top: 30px;
+}
+
+.left-panel {
+  position: relative;
+  flex: 1;
+  background-image: url("/static/images/back9.jpg");
+  background-size: cover;
+  background-position: center;
+  padding-left: 0px;
+  margin-right: 50px;
+  height: 466px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centered-content {
+  text-align: center;
+}
+
+.centered-content-title {
+  margin-bottom: 345px;
+  font-weight: 300;
+  font-size: 40px;
+  position: relative;
+  top: 90px;
+}
+
+.signup-button {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 10px 30px;
+  margin-right: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: -10px;
+  box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 300;
+  position: relative;
+  top: -200px;
+}
+
+.forgot-password-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.forgot-password-button {
+  display: inline-block;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 10px 30px;
+  margin-right: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.forgot-password-button:hover {
+  box-shadow: 4px 9px 15px 0px rgba(0, 0, 0, 0.75);
+}
+
+
+.forgot-password-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.right-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 536px;
+  padding: 13px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: black;
+}
+
+.input-container {
+  margin-bottom: 20px;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: white;
+  cursor: pointer;
+}
+
+input[type="email"]:hover,
+input[type="password"]:hover {
+  background-color: #f0f0f0;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.button {
+  position: relative;
+  overflow: hidden;
+  height: 3rem;
+  border-radius: 5px;
+  background: #000000;
+  background-size: 400%;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 600;
+  transition: background-color 0.5s;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
+
+.button-content {
+  position: relative;
+  z-index: 1;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5rem;
+  background: linear-gradient(
+    82.3deg,
+    rgba(0, 0, 0, 0.063) 0.8%,
+    hsl(212, 52%, 55%) 90%
+  );
+  transition: all 0.5s ease-in-out;
+}
+
+.button:hover {
+  background-color: #528ac9;
+}
+
+.signup-link {
+  text-align: center;
+  font-size: 14px;
+  color: rgb(130, 130, 130);
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+.signup-space {
+  display: inline-block;
+  width: 12px;
+}
+
+.signup-dec {
+  text-decoration: none;
+  color: #528ac9;
+}
+
+.social-media {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.social-media a img {
+  width: 25px;
+  padding-top: 24px;
+  height: auto;
+  margin: 0 5px;
+  transition: filter 0.1s ease;
+}
+
+.social-media a:hover img {
+  filter: invert(23%) sepia(100%) saturate(5993%) hue-rotate(240deg)
+    brightness(80%) contrast(100%);
+}
+
+.check {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  -webkit-tap-highlight-color: transparent;
+  transform: translate3d(0, 0, 0);
+}
+
+.check:before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(34, 50, 84, 0.03);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.check svg {
+  position: relative;
+  z-index: 1;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #c8ccd4;
+  stroke-width: 1.5;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.2s ease;
+}
+
+.check svg path {
+  stroke-dasharray: 60;
+  stroke-dashoffset: 0;
+}
+
+.check svg polyline {
+  stroke-dasharray: 22;
+  stroke-dashoffset: 66;
+}
+
+.check:hover:before {
+  opacity: 1;
+}
+
+.check:hover svg {
+  stroke: #528ac9;
+}
+
+#cbx:checked + .check svg {
+  stroke: #528ac9;
+}
+
+#cbx:checked + .check svg path {
+  stroke-dashoffset: 60;
+  transition: all 0.3s linear;
+}
+
+#cbx:checked + .check svg polyline {
+  stroke-dashoffset: 42;
+  transition: all 0.2s linear;
+  transition-delay: 0.15s;
+}
+
+.remember-me-text {
+  font-size: 14px;
+  vertical-align: middle;
+  margin-left: 5px;
+  cursor: pointer;
+}

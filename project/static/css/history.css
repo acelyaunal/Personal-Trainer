@@ -1,0 +1,226 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(to right, #b3d4fc, hsl(212, 52%, 55%));
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    color: #000;
+    width: 80%;
+    max-width: 1200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #d66000;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.user-info {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.user-info table {
+    width: auto;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: none;
+}
+
+.user-info td {
+    padding: 10px 20px;
+    border: 1px solid #d66000;
+    font-size: 18px;
+    text-align: left;
+}
+
+.user-info td:first-child {
+    font-weight: bold;
+    background-color: #f2f2f2;
+}
+
+.bmi-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.date-picker {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.date-picker label {
+    font-size: 20px;
+    font-weight: bold;
+    color: #d66000;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.date-picker input[type="date"] {
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    max-width: 200px;
+}
+
+.exercise-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.exercise-table th, .exercise-table td {
+    border: 1px solid #d66000;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.exercise-table th {
+    background-color: #d66000;
+    color: white;
+    text-align: left;
+}
+
+.exercise-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.exercise-table tr:hover {
+    background-color: #ddd;
+}
+
+.delete-button {
+    background-color: #d66000;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: #b25000;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.buttons a,
+.buttons button {
+    background-color: #d66000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.buttons a:hover,
+.buttons button:hover {
+    background-color: #b25000;
+}
+
+.buttons button {
+    width: auto;
+}
+
+.view-button {
+    background-color: #d66000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+.view-button:hover {
+    background-color: #b25000;
+}
+
+.message {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.message.success {
+    color: #28a745;
+}
+
+.message.error {
+    color: #dc3545;
+}
+
+.toggle-password {
+    background-color: transparent;
+    border: none;
+    color: #d66000;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: right;
+    margin-top: 5px;
+}
+
+.toggle-password:hover {
+    color: #b25000;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-info table {
+    border: none;
+    margin-bottom: 20px;
+}
+
+.profile-info td {
+    padding: 5px 15px;
+    font-size: 18px;
+    text-align: left;
+}
+
+.profile-info td:first-child {
+    font-weight: bold;
+}
+
+.profile-info td:last-child {
+    text-align: right;
+}
+
+.exercise-time {
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    color: #d66000;
+    margin-top: 20px;
+}

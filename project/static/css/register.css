@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body,
+html {
+  height: 100%;
+  background: linear-gradient(to left, #ffffff, hsl(212, 52%, 55%));
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 2s ease;
+}
+
+.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.container {
+  display: flex;
+  height: 520px;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin: 30px;
+}
+
+#verticle {
+  border-left: 1px solid #b2b2b2;
+  height: 464px;
+  position: absolute;
+  margin-right: -110px;
+  top: 30px;
+}
+
+.left-panel {
+  position: relative;
+  flex: 1;
+  background-image: url("/static/images/ayrç.jpg");
+  background-size: cover;
+  background-position: center;
+  padding-left: 0px;
+  margin-left: 50px;
+  height: 466px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centered-content {
+  text-align: center;
+}
+
+.centered-content-title {
+  margin-bottom: 345px;
+  font-weight: 300;
+  font-size: 40px;
+  position: relative;
+  top: 90px;
+}
+
+.login-button {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 10px 30px;
+  margin-right: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: -10px;
+  box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 300;
+  position: relative;
+  top: -200px;
+}
+
+.login-button:hover {
+  box-shadow: 4px 9px 15px 0px rgba(0, 0, 0, 0.75);
+}
+
+.right-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 536px;
+  padding: 16px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: black;
+}
+
+.input-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.input-container {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.input-container.full-width {
+  flex: 0 0 100%;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: calc(50% - 12px);
+  font-size: 14px;
+  background-color: white;
+  cursor: pointer;
+}
+
+select {
+  cursor: pointer;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+input[type="date"] {
+  width: calc(50% - 12px);
+  display: inline-block;
+}
+
+input[type="number"][id="height"] {
+  width: calc(25% - 10px);
+}
+
+input[type="number"][id="weight"] {
+  width: calc(25% - 10px);
+  margin-right: 16px;
+}
+
+input[type="text"]:hover,
+input[type="number"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover,
+input[type="date"]:hover,
+select:hover {
+  background-color: #f0f0f0;
+}
+
+.terms-service {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+
+.submit-btn {
+  position: relative;
+  overflow: hidden;
+  height: 3rem;
+  border-radius: 5px;
+  background: #000000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 600;
+  transition: background-color 0.5s;
+  margin-top: 20px;
+}
+
+.submit-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background: linear-gradient(
+    82.3deg,
+    rgba(0, 0, 0, 0.063) 0.8%,
+    hsl(212, 52%, 55%) 90%
+  );
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: all 0.5s ease-in-out;
+  z-index: 0;
+}
+
+.submit-btn span {
+  position: relative;
+  z-index: 10;
+}
+
+.submit-btn:hover::before {
+  transform: scaleX(1);
+}
+
+.submit-btn:hover {
+  background-color: #528ac9;
+}
+
+.additional-options {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.login-link {
+  margin-top: 24px;
+  font-size: 14px;
+  color: rgb(130, 130, 130);
+}
+
+.login-link a {
+  text-decoration: none;
+  color: #528ac9;
+  padding-left: 8px;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+.check {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  -webkit-tap-highlight-color: transparent;
+  transform: translate3d(0, 0, 0);
+}
+
+.check:before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(34, 50, 84, 0.03);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.check svg {
+  position: relative;
+  z-index: 1;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #c8ccd4;
+  stroke-width: 1.5;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.2s ease;
+  margin-top: 2px;
+}
+
+.check svg path {
+  stroke-dasharray: 60;
+  stroke-dashoffset: 0;
+}
+
+.check svg polyline {
+  stroke-dasharray: 22;
+  stroke-dashoffset: 66;
+}
+
+.check:hover:before {
+  opacity: 1;
+}
+
+.check:hover svg {
+  stroke: #528ac9;
+}
+
+#cbx:checked + .check svg {
+  stroke: #528ac9;
+}
+
+#cbx:checked + .check svg path {
+  stroke-dashoffset: 60;
+  transition: all 0.3s linear;
+}
+
+#cbx:checked + .check svg polyline {
+  stroke-dashoffset: 42;
+  transition: all 0.2s linear;
+  transition-delay: 0.15s;
+}
+
+.read-text {
+  font-size: 12px;
+  vertical-align: middle;
+  margin-left: 5px;
+  margin-top: 4px;
+  cursor: pointer;
+}

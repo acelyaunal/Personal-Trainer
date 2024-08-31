@@ -1,0 +1,50 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(to right, #b3d4fc, hsl(212, 52%, 55%));
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+}
+
+.section-title {
+    font-size: 36px;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.exercise-counts {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.button {
+    background-color: #d66000;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+.button:hover {
+    background-color: #b25000;
+}

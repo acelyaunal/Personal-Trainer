@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>End Exercise</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/end_exercise.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="section-title">End Exercise</h1>
+        <div class="exercise-counts">
+            {% for exercise, details in exercise_counts.items() %}
+                <p>{{ details.name }}: {{ details.count }} repetitions</p>
+            {% endfor %}
+        </div>
+        <button class="button" onclick="window.location.href='{{ url_for('select_exercises') }}'">New Exercise</button>
+        <button class="button" onclick="window.location.href='{{ url_for('history', date=current_date) }}'">Profile</button>
+        <button class="button" onclick="window.location.href='{{ url_for('logout') }}'">Logout</button>
+    </div>
+    <script src="{{ url_for('static', filename='js/end_exercise.js') }}"></script>
+</body>
+</html>

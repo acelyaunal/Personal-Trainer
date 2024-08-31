@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PTWA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  </head>
+  <body>
+
+    <header>
+      <div class="header-wrapper">
+        <div class="header-logo">
+          <a href="#" class="logo">
+            <img class="main-logo" src="{{ url_for('static', filename='images/ptwa.png') }}" alt="logo" >
+          </a>
+        </div>
+        <div class="header-center">
+          <div class="header-items">
+            <a href="#home" class="items">HOME</a>
+            <a href="#about" class="items">ABOUT</a>
+            <a href="#exercises" class="items">EXERCISES</a>
+            <a href="#contact-us" class="items">CONTACT US</a>
+            <a href="#bmi-calculator-section" class="items">BMI CALCULATOR</a>
+          </div>
+        </div>
+        <div class="header-right">
+          <div class="header-search">
+            <input type="search" placeholder="Search..." />
+            <a href="#">
+              <img class="search-2" src="{{ url_for('static', filename='images/search2.png') }}" alt="search">
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <section id="home" class="home">
+      <div class="content reveal">
+        <h3>PERSONAL TRAINER <span style="color: #d66000;">WEB APP</span></h3>
+        <p>
+          "We are here to guide you on the path to a healthy life you've dreamed of. Take a step forward and open the doors to change!"
+        </p>
+        <div class="content-button">
+          <a href="{{ url_for('login') }}" class="kayit-button" target="_blank">LOG IN</a>
+          <a href="{{ url_for('register') }}" class="kayit-button" target="_blank">REGISTER NOW</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="content2 reveal">
+        <h1 class="our-goal">OUR GOAL</h1><hr>
+    
+        <i class="bold">"New to sports? Want to learn the right techniques and do effective exercises? PTWA can help you reach your goals!"
+        </i>
+    
+        <i>
+          Exercising is an important part of a healthy lifestyle. However, using the correct techniques and minimizing injury risk while exercising is crucial. With PTWA, we aim to ensure that everyone exercises correctly, safely, and for free.
+        </i>
+    
+        <i>
+          Thanks to our advanced image processing technology, we analyze users' exercise movements in real-time and correct mistakes. This way, users get the most out of each exercise.
+        </i>
+      </div>
+      <div class="image-grid">
+        <div class="image-item">
+          <img src="{{ url_for('static', filename='images/back6.jpg') }}" alt="Image 1">
+          <h3>Strength and Endurance</h3>
+          <p>Exercising increases your strength and endurance. Regular exercises strengthen your body and help you stay active for longer periods.</p>
+        </div>
+        <div class="image-item">
+          <img src="{{ url_for('static', filename='images/back7.jpg') }}" alt="Image 2">
+          <h3>Fitness and Flexibility</h3>
+          <p>Exercises not only improve fitness but also increase flexibility. Flexibility helps you move more comfortably and effectively in daily activities.</p>
+        </div>
+        <div class="image-item">
+          <img src="{{ url_for('static', filename='images/back4.jpg') }}" alt="Image 3">
+          <h3>Mental Health and Well-being</h3>
+          <p>Exercising benefits not only your physical health but also your mental health. Conscious exercises reduce stress and help you feel happier and more focused.</p>
+        </div>
+      </div>
+    </div>
+    </section>
+
+    <section id="exercises" class="exercises">
+      <div class="content3 reveal">
+        <h1 class="section-title">EXERCISES</h1>
+        <div class="exercises-content">
+          <a href="{{ url_for('login') }}" class="exercises-link">
+            <div class="exercises-image">
+              <img src="{{ url_for('static', filename='images/squatexercise.png') }}" alt="Exercise 1">
+              <h4>SQUAT</h4>
+            </div>
+          </a>
+          <a href="{{ url_for('login') }}" class="exercises-link">
+            <div class="exercises-image">
+              <img src="{{ url_for('static', filename='images/dumbellcurlexercise.png') }}" alt="Exercise 2">
+              <h4>DUMBELL CURL</h4>
+            </div>
+          </a>
+          <a href="{{ url_for('login') }}" class="exercises-link">
+            <div class="exercises-image">
+              <img src="{{ url_for('static', filename='images/legraiseexercise.png') }}" alt="Exercise 3">
+              <h4>LEG RAISE</h4>
+            </div>
+          </a>
+          <a href="{{ url_for('login') }}" class="exercises-link">
+            <div class="exercises-image">
+              <img src="{{ url_for('static', filename='images/birddogexercise.png') }}" alt="Exercise 4">
+              <h4>BIRD DOG</h4>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact-us" class="contact-us">
+    <div class="content4 reveal">
+      <div class="contact-map-wrapper">
+        <div class="contact-form">
+          <form id="contactForm">
+            <h1>CONTACT US</h1>
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="text" id="surname" placeholder="Surname" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="subject" placeholder="Subject" required>
+            <h4>Your Message... </h4>
+            <textarea id="message" required></textarea>
+            <input type="submit" value="SEND" id="button">
+          </form>
+        </div>
+        <div class="google-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3013.352685456876!2d29.38953701139886!3d40.95185202277831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cad7b50f100fcb%3A0x4bfe6a3dfc7c6a76!2s%C4%B0stanbul%20Okan%20%C3%9Cniversitesi!5e0!3m2!1str!2str!4v1714411122423!5m2!1str!2str" width="500" height="400" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>
+      var button = document.getElementById('button');
+      button.addEventListener("click", function (e) {
+            e.preventDefault();
+            var name = document.getElementById('name').value;
+            var surname = document.getElementById('surname').value;
+            var email = document.getElementById('email').value;
+            var subject = document.getElementById('subject').value;
+            var message = document.getElementById('message').value;
+            var body = "Name: " + name + "<br/>" +
+                "Surname: " + surname + "<br/>" +
+                "Email: " + email + "<br/>" +
+                "Subject: " + subject + "<br/>" +
+                "Message: " + message;
+
+            //TO USE THE EMAIL SENDING FEATURE, SET UP YOUR OWN SMTP SERVER AND FILL IN THE BLANKS! ---> https://www.smtpjs.com/
+            
+            Email.send({
+            Host: "smtp.elasticemail.com",
+            Username: "demo81440@gmail.com",
+            Password: "B6F9FDC29EA82B8B1249FAEF76BEEA6B616C",
+            To: "demo81440@gmail.com",
+            From: "demo81440@gmail.com",
+            Subject: subject,
+            Body: body,
+            }).then((message) => alert("Email sent successfully!"));
+          });
+    </script>
+    </section>
+
+    <section id="bmi-calculator-section" class="bmi-calculator-section">
+        <div class="content5 reveal">
+          <div class="bmi-calculator-box">
+            <h1>BMI CALCULATOR</h1>
+            <div class="bmi-calculator-content">
+              <div class="bmi-calculator-input">
+                <label for="bmi-age">AGE</label>
+                <input
+                  type="number"
+                  class="bmi-text-input"
+                  id="bmi-age"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+      
+              <div class="bmi-containerHW">
+                <div class="bmi-inputH">
+                  <label for="bmi-height">HEIGHT - CM</label>
+                  <input type="number" id="bmi-height" required />
+                </div>
+      
+                <div class="bmi-inputW">
+                  <label for="bmi-weight">WEIGHT - KG</label>
+                  <input type="number" id="bmi-weight" required />
+                </div>
+              </div>
+      
+              <button class="bmi-calculate" id="bmi-submit" onclick="checkInputAndCalculate();">
+                CALCULATE BMI
+              </button>
+            </div>
+            <div class="bmi-result">
+              <p>Your BMI Is:</p>
+              <div id="bmi-result">00.00</div>
+              <p class="bmi-comment"></p>
+            </div>
+            <div class="bmi-footer"></div>
+          </div>
+        </div>
+        <table class="bmi-table">
+          <tr>
+            <th class="categories">BMI Categories</th>
+            <th class="bmi-range">BMI Range</th>
+          </tr>
+          <tr>
+            <td class="categories">Underweight</td>
+            <td class="bmi-range">&lt; 18.5</td>
+          </tr>
+          <tr>
+            <td class="categories">Normal weight</td>
+            <td class="bmi-range">18.5 – 24.9</td>
+          </tr>
+          <tr>
+            <td class="categories">Overweight</td>
+            <td class="bmi-range">25 – 29.9</td>
+          </tr>
+          <tr>
+            <td class="categories">Obesity</td>
+            <td class="bmi-range">30 - 34.9</td>
+          </tr>
+          <tr>
+            <td class="categories">Extremely Obese</td>
+            <td class="bmi-range">&gt; 35</td>
+          </tr>
+        </table>
+      </section>
+      
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-left">
+            <h3>Personal Trainer <span>Web App</span></h3>
+            <p class="footer-links">
+              <a href="#home">Home</a>
+              ·
+              <a href="#about">About</a>
+              ·
+              <a href="#exercises">Exercises</a>
+              ·
+              <a href="#contact-us">Contact Us</a>
+              ·
+              <a href="#bmi-calculator-section">BMI Calculator</a>
+            </p>
+            <p class="footer-company-name">Personal Trainer Web App &copy; 2024</p>
+            <div class="footer-icons">
+              <a href="https://www.instagram.com/okanuniversitesi/" target="_blank"><img class="insta-icon" src="{{ url_for('static', filename='images/instagram.png') }}" alt="instagram"></a>
+              <a href="https://twitter.com/okanedu" target="_blank"><img class="x-icon" src="{{ url_for('static', filename='images/social-media.png') }}" alt="x"></a>
+              <a href="https://www.facebook.com/okanedu/?locale=tr_TR" target="_blank"><img class="facebook-icon" src="{{ url_for('static', filename='images/social-media (1).png') }}" alt="facebook"></a>
+              <a href="https://www.linkedin.com/school/okanuniversitesi/?originalSubdomain=tr" target="_blank"><img class="linkedin-icon" src="{{ url_for('static', filename='images/business.png') }}" alt="linkedin"></a>
+            </div>
+          </div>
+          <div class="footer-center">
+            <h4>Contact Information</h4>
+            <div class="contact-info">
+              <img src="{{ url_for('static', filename='images/pin.png') }}" alt="Map Icon">
+              <p>1234 Elm Street, Apt. 5B Springfield, 62701</p>
+            </div>
+            <div class="contact-info">
+              <img src="{{ url_for('static', filename='images/phone-call.png') }}" alt="Phone Icon">
+              <p>+1 555 123-4567</p>
+            </div>
+            <div class="contact-info">
+              <img src="{{ url_for('static', filename='images/email (2).png') }}" alt="Email Icon">
+              <p><a href="mailto:demo81440@gmail.com" style="color: white;">demo81440@gmail.com</a></p>
+            </div>
+          </div>
+          <div class="footer-right">
+            <p class="footer-company-about">
+              <span>About The PTWA</span>
+              You can become a free member with PTWA and exercise anywhere you want. Our goal is to ensure you perform exercises correctly, preventing injuries while working out. With this application, which promotes a healthy lifestyle, we offer you the personal trainer experience!            </p>
+          </div>
+        </div>
+      </footer>
+      
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>
